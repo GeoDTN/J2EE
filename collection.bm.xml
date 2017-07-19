@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.collection.Utenze" table="utenze">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+     <property name="uname" column="codU" />
+      <property name="upassword" column="pwdU" />   
+  </class>
+  <class name="com.collection.Articoli" table="articles">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+     <property name="codA" column="Coda" />
+      <property name="desA" column="Desa" />   
+      <property name="umiA " column="umia" />
+      <property name="przA" column="przA" /> 
+  </class>
+  <class name="com.collection.Clienti" table="clients">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+     <property name=" codC	" column="CBC" />
+      <property name="indC" column="LOCC" /> 
+       <property name="ragC" column="ragC" />  
+  </class>
+  <class name="com.collection.Listino" table="list">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+     <property name="artL" column="Artl" />
+      <property name="codL" column="codL" />  
+      <property name="przL" column="prz" /> 
+      <property name="scoL" column="SCOL" />  
+  </class>
+  <class name="com.collection.Ordini" table="orders">
+    <id name="id" column="id">
+      <generator class="native"/>
+    </id>
+     <property name="codO" column="Codo" />   
+      <property name="numO" column="Numo" />  
+      <property name="przO" column="przO" />  
+      <property name="qtaO" column="qtaO" />  
+      <property name="rigO" column="Rigo" />  
+      <property name="scoO" column="SCOO" />  
+      <property name="artO" column="artO" />
+      <property name="totO" column="Toto" />     
+  </class>
+</hibernate-mapping> 
