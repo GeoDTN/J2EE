@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <constant name="struts.devMode" value="true" />
+
+   <package name="myhibernate" extends="hibernate-default">
+
+      <action name="addUser" method="execute"
+         class="com.collection.CollectionAction">
+         <result name="success" type="redirect">
+               listUsers
+         </result>
+      </action>
+
+      <action name="listUsers" method="listUsers"
+         class="com.collection.CollectionAction">
+         <result name="success">/students.jsp</result>
+      </action>
+
+</package>
+
+</struts>
